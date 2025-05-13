@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#e38528;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    line-height: 1.5;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#ffebee;
+    padding-left: 0;
+}
+
+section{
+    padding:1rem 5%;
+    min-height: 100vh;
+}
+
+.heading{
+    font-size: 12rem;
+    padding-bottom: 1rem;
+    color:#111;
+    text-transform: uppercase;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--main-color);
+    color:#fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background:#111;
+    letter-spacing: .2rem;
+}
+
+header {
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0;           /* Aligns it at the top of the page */
+    left: 0;
+    right: 0;
+    background-color: #222; /* Background color */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;  /* Ensure it stays on top of other elements */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+header .logo img {
+    height: 120px; /* Adjust the height to fit the navbar space */
+    width: auto;  /* Maintain the aspect ratio */
+}
+
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #e38528; /* Change color on hover */
+}
+/* Dropdown container styling */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Hidden dropdown content (initially hidden) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Style each dropdown item */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Social media links */
+.follow a {
+    color: white;
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+.follow a:hover {
+    color: #e38528; /* Hover color */
+}
+
+#menu-bars{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: .5rem;
+    padding:1rem 1.5rem;
+    font-size: 3rem;
+    cursor:pointer;
+    display: none;
+}
+
+.cursor-1, .cursor-2 {
+    display: none; /* Optional: Hide custom cursor */
+}
+
+/* CSS */
+.home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 5rem;
+    overflow: hidden;
+    background-position: center right; /* Start on the right side */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 20s infinite ease-in-out;
+}
+
+@keyframes change {
+    0% {
+        background-image: url('images/customer.png');
+        background-position: right;
+    }
+    20% {
+        background-image: url('images/savannah honey 2.jpg');
+        background-position: center;
+    }
+    40% {
+        background-image: url('images/savannah honey 3.jpg');
+        background-position: left;
+    }
+    60% {
+        background-image: url('images/savannah honey 4.png');
+        background-position: center;
+    }
+    80% {
+        background-image: url('images/savannah honey 5.png');
+        background-position: right;
+    }
+    100% {
+        background-image: url('images/customer.png'); /* Loops back to the first image */
+        background-position: left;
+    }
+}
+
+
+.home .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 700px;
+    text-align: center;
+}
+
+.home .content .hi {
+    font-size: 4.5rem;
+    color: #fff;
+}
+
+.home .content h3 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.home .content h3 span {
+    color: var(--main-color);
+}
+
+.home .content .info {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+.home .content .text {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #111;
+    letter-spacing: .2rem;
+}
+
+.about {
+    padding: 5rem 5%;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+.about .heading {
+    font-size: 4rem;
+    color: #222;
+    margin-bottom: 2rem;
+}
+
+.about .heading span {
+    color: var(--main-color);
+}
+
+.about .description {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Garamond', 'Georgia', serif;
+}
+
+.mission-vision-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.mission-vision-values > div {
+    flex: 1 1 300px;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission-vision-values h3 {
+    font-size: 2.5rem;
+   
+    margin-bottom: 1rem;
+    font-family: 'Garamond', 'Georgia', serif;
+}
+
+.mission-vision-values p, .mission-vision-values ul {
+    font-size: 2.5rem;
+    color: #666;
+    text-align: left;
+    font-family: 'Garamond', 'Georgia', serif;
+}
+
+.mission-vision-values ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.mission-vision-values li {
+    margin-bottom: 0.5rem;
+    font-family: 'Garamond', 'Georgia', serif;
+}
+}
+
+.mission-vision-values li strong {
+    color: #333;
+}
+
+.products {
+    padding: 5rem 5%;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.product-item {
+    display: inline-block;
+    width: 300px;
+    margin: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;/
+
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-content h3 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.product-content p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.6rem;
+    color: #e38528;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+.partners {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: teal;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.partner-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.partner-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.partner-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.partner-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.partner-item p {
+    font-size: 1.4rem;
+    color: #666;
+}
+.contact {
+    padding: 5rem 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.contact-description {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-container {
+    display: flex;
+    align-items: stretch; /* Ensures both items are the same height */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.contact-image {
+    flex: 1; /* Ensures the image container is flexible */
+    display: flex;
+    align-items: center; /* Centers the image vertically */
+    justify-content: center; /* Centers the image horizontally */
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%; /* Makes the image container's height match the form */
+    object-fit: cover; /* Ensures the image covers the container while keeping aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+
+.form-group label {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e38528;
+    outline: none;
+}
+
+.btn-submit {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #e38528;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #d47420;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-image,
+    .contact-form-container {
+        width: 100%;
+    }
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 5%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo h2 {
+    color: #e38528;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #e38528;
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    color: #ddd;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: #ddd;
+    font-size: 3rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #e38528; /* Change color on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #555;
+    color: #aaa;
+    font-size: 2rem;
+}
